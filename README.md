@@ -171,6 +171,7 @@ CSV HEADER;
 ```
    
 6. Open Power BI Dashboard
+```bash
 - `Open Dashboard/IT_Layoffs_Analysis.pbix` in Power BI Desktop
 - Connect to your PostgreSQL database
 ```
