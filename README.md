@@ -91,12 +91,12 @@ global-it-layoff-analysis/
 Performed in Python using Pandas:
 
 Removed duplicate records
-- Fixed date column — converted to datetime format
+- Fixed date column: converted to datetime format
 - Extracted year, month, month_name, year_month from date
-- Cleaned text columns — stripped whitespace, fixed casing
+- Cleaned text columns: stripped whitespace, fixed casing
 - Fixed known dirty values (e.g. "United States." → "United States")
 - Removed columns with no analytical value (source, location, date_added)
-- Filled null values — total_laid_off & funds_raised → 0, text columns → "Unknown"
+- Filled null values: total_laid_off & funds_raised → 0, text columns → "Unknown"
 - Dropped rows where both total_laid_off and percentage_laid_off were null
 ---
 <h2><a class="anchor" id="sql-analysis-eda"></a>SQL Analysis</h2>
@@ -117,26 +117,26 @@ Removed duplicate records
 ---
 <h2><a class="anchor" id="key-findings"></a>Key Findings</h2>
 
-📊 843,580+ people lost jobs across 3,620+ layoff events from 2020 to 2026
-📅 2023 was the worst year — 264,000 layoffs driven by Amazon, Google and Microsoft simultaneously
-🗓️ January is the most dangerous month — companies cut budgets at the start of every year
-🌍 USA accounts for 80%+ of all global IT layoffs — the crisis was primarily American
-🏭 Consumer & Retail industries were hit the hardest by total layoff numbers
-🏢 Post-IPO companies (Amazon, Google, Meta) were responsible for the majority of job cuts
-💀 100+ companies completely shut down — percentage_laid_off = 1.0 (100% workforce gone)
-🚨 January 2023 was the single peak event — Amazon, Google, Microsoft & Salesforce all announced mass layoffs in the same month
-🇮🇳 India had 66,000+ layoffs — 2nd most affected country after USA
-💰 Money did NOT save companies — even highly funded startups laid off massively or shut down entirely
+- 843,580+ people lost jobs across 3,620+ layoff events from 2020 to 2026
+- 2023 was the worst year:- 264,000 layoffs driven by Amazon, Google and Microsoft simultaneously
+- January is the most dangerous month:- companies cut budgets at the start of every year
+- USA accounts for 80%+ of all global IT layoffs:- the crisis was primarily American
+- Consumer & Retail industries were hit the hardest by total layoff numbers
+- Post-IPO companies (Amazon, Google, Meta) were responsible for the majority of job cuts
+- 100+ companies completely shut down:- percentage_laid_off = 1.0 (100% workforce gone)
+- January 2023 was the single peak event:- Amazon, Google, Microsoft & Salesforce all announced mass layoffs in the same month
+🇮🇳 India had 66,000+ layoffs:- 2nd most affected country after USA
+- Money did NOT save companies:- even highly funded startups laid off massively or shut down entirely
 
 ---
 <h2><a class="anchor" id="dashboard"></a>Dashboard</h2>
 
 4-page interactive Power BI dashboard:
 
-📋 **1.Overview of Global IT Layoffs:** KPI cards (total laid off, events, avg %, companies), layoffs by year bar chart, monthly trend line chart, industry donut chart
-🏢 **2.Impact on Companies & Industries:** Top 10 companies horizontal bar, layoffs by company stage, companies that completely shutdown table, worst single layoff events table
-🌍 **3.Layoff Trends Over Time & Geography:** World map by country, monthly rolling total line chart, most dangerous months bar chart, India vs USA vs UK grouped bar
-🔬 **4.Deep Dive Into Layoff Patterns:** Funds raised vs layoffs scatter plot, industry recovery clustered bar (2020 vs 2022 vs 2023 vs 2024), top 5 companies per year table, layoff % by industry bar chart
+- **1.Overview of Global IT Layoffs:** KPI cards (total laid off, events, avg %, companies), layoffs by year bar chart, monthly trend line chart, industry donut chart
+- **2.Impact on Companies & Industries:** Top 10 companies horizontal bar, layoffs by company stage, companies that completely shutdown table, worst single layoff events table
+- **3.Layoff Trends Over Time & Geography:** World map by country, monthly rolling total line chart, most dangerous months bar chart, India vs USA vs UK grouped bar
+- **4.Deep Dive Into Layoff Patterns:** Funds raised vs layoffs scatter plot, industry recovery clustered bar (2020 vs 2022 vs 2023 vs 2024), top 5 companies per year table, layoff % by industry bar chart
 
 ![Global IT Layoff Analysis](Images/1.Overview Layoff Data.png)
 ![Global IT Layoff Analysis](Images/2.Impact on Company and Industry.png)
@@ -168,21 +168,23 @@ CSV HEADER;
 5.  Run SQL analysis
 ```bash
    psql -d layoffs_db -f sql/layoff_analysis.sql
+```
    
 6. Open Power BI Dashboard
 - `Open Dashboard/IT_Layoffs_Analysis.pbix` in Power BI Desktop
 - Connect to your PostgreSQL database
+```
 
 
 
 ---
 <h2><a class="anchor" id="final-recommendations"></a>Final Recommendations</h2>
 
-👨‍💼 **For Job Seekers:** Avoid joining Post-IPO tech companies during Q4/Q1 budget cycles. Target Series A-B stage companies in non-consumer industries for more stable employment
-🏢 **For HR Professionals:** Monitor January layoff cycles carefully. Q1 is consistently the most dangerous period — plan retention strategies well before year end
-💼 **For Investors:** Diversify away from Consumer and Retail tech sectors which showed the highest total layoffs. Healthcare and Hardware showed lower percentage workforce cuts
-🏛️ **For Policymakers:** India being the 2nd most affected country despite being an offshore hub shows the need for stronger tech workforce protection policies
-🏗️ **For Companies:** Over-hiring during boom periods leads to painful mass corrections. Sustainable hiring practices that avoid dramatic scale-up and scale-down cycles are essential
+- **For Job Seekers:** Avoid joining Post-IPO tech companies during Q4/Q1 budget cycles. Target Series A-B stage companies in non-consumer industries for more stable employment
+- **For HR Professionals:** Monitor January layoff cycles carefully. Q1 is consistently the most dangerous period — plan retention strategies well before year end
+- **For Investors:** Diversify away from Consumer and Retail tech sectors which showed the highest total layoffs. Healthcare and Hardware showed lower percentage workforce cuts
+- **For Policymakers:** India being the 2nd most affected country despite being an offshore hub shows the need for stronger tech workforce protection policies
+- **For Companies:** Over-hiring during boom periods leads to painful mass corrections. Sustainable hiring practices that avoid dramatic scale-up and scale-down cycles are essential
 
 
 ---
