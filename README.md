@@ -138,10 +138,13 @@ Removed duplicate records
 - **3.Layoff Trends Over Time & Geography:** World map by country, monthly rolling total line chart, most dangerous months bar chart, India vs USA vs UK grouped bar
 - **4.Deep Dive Into Layoff Patterns:** Funds raised vs layoffs scatter plot, industry recovery clustered bar (2020 vs 2022 vs 2023 vs 2024), top 5 companies per year table, layoff % by industry bar chart
 
-![Global IT Layoff Analysis](Images/1.Overview Layoff Data.png)
-![Global IT Layoff Analysis](Images/2.Impact on Company and Industry.png)
-![Global IT Layoff Analysis](Images/3.Layoff trend over timeline and geography.png)
-![Global IT Layoff Analysis](Images/4.Deep dive into layoff pattern.png)
+![Overview](Images/Overview.png)
+
+![Impact](Images/Impact.png)
+
+![Trend](Images/Trend.png)
+
+![Deep Dive](Images/Deep_Dive.png)
 
 ---
 <h2><a class="anchor" id="how-to-run-this-project"></a>How to Run This Project</h2>
