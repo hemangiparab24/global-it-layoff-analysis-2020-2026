@@ -74,14 +74,14 @@ global-it-layoff-analysis/
 ├── SQL_Scripts/
 │   └── layoff_analysis.sql          
 │
-├── dashboard/
+├── Dashboard/
 │   └── IT_Layoffs_Analysis.pbix     
 │
-└── └── images/
-    ├── 1. Overview of Layoff Data.png
-    ├── 2. Impact on Company and Industry.png
-    ├── 3. Layoff trend over timeline and geography.png
-    └── 4. Deep dive into layoff pattern.png
+└── └── Images/
+    ├── 1. Overview.png
+    ├── 2. Impact.png
+    ├── 3. Trend.png
+    └── 4. Deep_Dive.png
         
 ```
 
@@ -90,7 +90,7 @@ global-it-layoff-analysis/
 
 Performed in Python using Pandas:
 
-Removed duplicate records
+- Removed duplicate records
 - Fixed date column: converted to datetime format
 - Extracted year, month, month_name, year_month from date
 - Cleaned text columns: stripped whitespace, fixed casing
